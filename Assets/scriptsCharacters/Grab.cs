@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class Grab : MonoBehaviour {
-   
+
+    public string grabButton = "Action1_P1";
     public GameObject target;
     private bool canGrab = false;
     private BoxCollider2D claw;
@@ -13,9 +14,8 @@ public class Grab : MonoBehaviour {
 
     void Update() {
 
-        if (Input.GetKey("g")) {
+        if (Input.GetButton(grabButton)) {
             Grabing();
-            Debug.Log("Pressed G");
         }
     }
 
@@ -36,7 +36,7 @@ public class Grab : MonoBehaviour {
     }
     void Grabing() {
         if (canGrab) { 
-        target.transform.position = transform.position;
+            target.transform.position = transform.position;
         }
 
     }

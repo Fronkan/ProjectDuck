@@ -5,6 +5,8 @@ public class duckController : MonoBehaviour {
 
     public float speed = 0.2f;
     public float flySpeed= 0.2f;
+    public string horizontalControl = "Horizontal_P1";
+    public string verticalControl = "Vertical_P1";
     private bool faceingRight = true;
     private Rigidbody2D duckBody;
 
@@ -15,7 +17,7 @@ public class duckController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       float move = Input.GetAxis("Horizontal");
+       float move = Input.GetAxis(horizontalControl);
         
        
         if (move < 0 && faceingRight) {
@@ -27,7 +29,7 @@ public class duckController : MonoBehaviour {
         }
 
 
-        float fly = Input.GetAxis("Vertical");
+        float fly = Input.GetAxis(verticalControl);
         //Currently only moves characters up, no physics to move it down
         duckBody.velocity = new Vector2(move * speed,fly * flySpeed);
 

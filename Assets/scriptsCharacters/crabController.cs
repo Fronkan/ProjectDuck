@@ -6,6 +6,8 @@ public class crabController : MonoBehaviour {
     public float speed = 10f;
     public float jumpForce = 40f;
     public float gravity = 1f;
+    public string horizontalControl = "Horizontal_P2";
+    public string jumpButton = "Jump_P2";
 
     private float move = 0f;
 
@@ -32,12 +34,12 @@ public class crabController : MonoBehaviour {
 
 
     void Move() {
-        move = Input.GetAxis("Horizontal");
+        move = Input.GetAxis(horizontalControl);
 
         crabBody.velocity = new Vector2(speed * move, crabBody.velocity.y);
     }
     void Jump() {
-        bool isJumping = Input.GetButton("Jump");
+        bool isJumping = Input.GetButton(jumpButton);
         if (isGrounded && isJumping)
         {
             crabBody.AddForce(new Vector2(0, jumpForce));
@@ -49,6 +51,5 @@ public class crabController : MonoBehaviour {
     void IsGrounded()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
-        Debug.Log(isGrounded);
     }
 }
