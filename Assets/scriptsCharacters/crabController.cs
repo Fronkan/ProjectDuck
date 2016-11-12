@@ -28,8 +28,9 @@ public class crabController : MonoBehaviour {
         IsGrounded();
         Jump();
         Move();
-       
-	}
+        transform.eulerAngles = Vector3.zero;
+
+    }
 
 
 
