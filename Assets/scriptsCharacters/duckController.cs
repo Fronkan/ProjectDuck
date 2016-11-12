@@ -28,9 +28,10 @@ public class duckController : MonoBehaviour {
 
 
         float fly = Input.GetAxis("Vertical");
-           //Currently only moves characters up, no physics to move it down
-            duckBody.velocity = new Vector2(move * speed,fly * flySpeed);
-           
+        //Currently only moves characters up, no physics to move it down
+        duckBody.velocity = new Vector2(move * speed,fly * flySpeed);
+
+        transform.eulerAngles = Vector3.zero;
     }
 
     void Flip() {
