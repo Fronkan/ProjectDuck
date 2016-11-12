@@ -7,13 +7,16 @@ public class duckController : MonoBehaviour {
     public float flySpeed= 0.2f;
     public string horizontalControl = "Horizontal_P1";
     public string verticalControl = "Vertical_P1";
+
+
     private bool faceingRight = true;
     private Rigidbody2D duckBody;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         duckBody= gameObject.GetComponent<Rigidbody2D>();
-	}
+      
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -42,4 +45,7 @@ public class duckController : MonoBehaviour {
         scale.x = -1*scale.x;
         transform.localScale = scale;
     }
+
+
+
 }
