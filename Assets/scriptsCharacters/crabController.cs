@@ -3,8 +3,8 @@ using System.Collections;
 
 public class crabController : MonoBehaviour {
 
-    public float speed = 1f;
-    public float jumpForce = 1f;
+    public float speed = 10f;
+    public float jumpForce = 40f;
     public float gravity = 1f;
 
     private float move = 0f;
