@@ -6,11 +6,11 @@ public class duckController : MonoBehaviour {
     public float speed = 0.2f;
     public float flySpeed= 0.2f;
     private bool faceingRight = true;
-    private CharacterController characterController;
+    private Rigidbody2D duckBody;
 
 	// Use this for initialization
 	void Start () {
-        characterController = gameObject.GetComponent<CharacterController>();
+        duckBody= gameObject.GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
@@ -29,7 +29,7 @@ public class duckController : MonoBehaviour {
 
         float fly = Input.GetAxis("Vertical");
            //Currently only moves characters up, no physics to move it down
-            characterController.Move(new Vector3(move * speed,fly * flySpeed, 0));
+            duckBody.velocity = new Vector2(move * speed,fly * flySpeed);
            
     }
 
