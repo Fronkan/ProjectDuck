@@ -4,7 +4,6 @@ using System.Collections;
 public class GateRaiser : SignalReciever {
 
 	public float TargetHeight;
-	public bool AutoLower;
 	public float RaiseSpeed;
 	public float LowerSpeed;
 
@@ -15,17 +14,21 @@ public class GateRaiser : SignalReciever {
 	private State state = State.still;
 
 	void Update() {
-		Debug.Log(state);
 		switch(state) {
 			case State.raising:
-				gameObject.transform.position += Vector3.up * RaiseSpeed * Time.deltaTime;
-				if(gameObject.transform.position.y > TargetHeight) {
+				gameObject.transform.localPosition += Vector3.up
+				                                    * RaiseSpeed
+				                                    * Time.deltaTime;
+				if(gameObject.transform.localPosition.y > TargetHeight) {
 					state = State.lowering;
 				}
 				break;
 			case State.lowering:
-				gameObject.transform.position += Vector3.down * LowerSpeed * Time.deltaTime;
-				if(gameObject.transform.position.y < Vector3.zero.magnitude) {
+				gameObject.transform.localPosition += Vector3.down
+				                                    * LowerSpeed
+				                                    * Time.deltaTime;
+				if(gameObject.transform.localPosition.y < 0) {
+					gameObject.transform.localPosition = Vector3.zero;
 					state = State.still;
 				}
 				break;
@@ -33,7 +36,6 @@ public class GateRaiser : SignalReciever {
 	}
 
 	void RecieveSignal() {
-		Debug.Log("Raisinig");
 		state = State.raising;
 	}
 }

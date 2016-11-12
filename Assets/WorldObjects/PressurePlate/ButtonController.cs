@@ -5,23 +5,15 @@ public class ButtonController : MonoBehaviour {
 
 	public SignalReciever signalReciever;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
 	void OnTriggerEnter() {
-		Debug.Log("Trigger");
-		signalReciever.SendMessage("RecieveSignal");
+		Raise();
 	}
 
 	void OnMouseDown() {
-		Debug.Log("Sending raise");
+		Raise();
+	}
+
+	void Raise() {
 		signalReciever.SendMessage("RecieveSignal");
 	}
 }
