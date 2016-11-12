@@ -5,13 +5,15 @@ public class ThunderCloud : MonoBehaviour {
 
 	SpriteRenderer cloud;
 	SpriteRenderer thunderCloud;
+	public float delay;
+	public float repeatTime;
 
 	// Use this for initialization
 	void Start () {
 		cloud = transform.Find("cloud").GetComponent<SpriteRenderer>();
 		thunderCloud = transform.Find("thunderCloud").GetComponent<SpriteRenderer>();
 
-		InvokeRepeating("ReadyShoot", 5f, 5f);
+		InvokeRepeating("ReadyShoot", delay, repeatTime);
 	}
 	
 	// Update is called once per frame
