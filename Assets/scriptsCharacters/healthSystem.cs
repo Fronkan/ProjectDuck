@@ -8,5 +8,6 @@ public class healthSystem : MonoBehaviour {
 
     public void Damage() {
         Debug.Log(gameObject.name + ": DAMAGE TAKEN");
+		Destroy(gameObject, 0);
     }
 }

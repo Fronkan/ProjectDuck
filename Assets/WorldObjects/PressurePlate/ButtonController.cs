@@ -5,7 +5,7 @@ public class ButtonController : MonoBehaviour {
 
 	public SignalReciever signalReciever;
 
-	void OnTriggerEnter() {
+	void OnTriggerEnter2D() {
 		Raise();
 	}
 

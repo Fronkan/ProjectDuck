@@ -13,7 +13,7 @@ public class DamageDealer : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter(Collider target) {
+	void OnTriggerEnter2D(Collider2D target) {
 		target.SendMessage("Damage");
 	}
 }
