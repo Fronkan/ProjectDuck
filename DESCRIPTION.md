@@ -10,7 +10,7 @@ bunch of traps and puzzles they need to overcome. They do this by moving about.
 If they don't make it there on time the world ends without them, and they get
 stuck in limbo.
 
-> #co-op #deep #controller #good
+> \#co-op #deep #controller #good
 
 ---
 
@@ -19,11 +19,13 @@ stuck in limbo.
 >
 > Angry Monkeys game awards
 
+#
 
 > Har påriktigt pillat med mobilen i två timmar
 >
 > Någon på Jodel
 
+#
 
 > I'm not even passingly familiar with those scholars, but that segment in MGS2
 > remind me a lot of Snow Crash book, fair to assume they got similar sources
@@ -31,23 +33,28 @@ stuck in limbo.
 >
 > /u/Zamkavedeko
 
+#
 
 > This is a basic implementation that words.
 >
 > whatthecommit.com
 
+#
 
 > Är du osäker på hur du använder resekortet på bussen eller tåget? Med våra
 > instruktionsfilmer blir din resa enklare. 
 >
 > Östgötatrafixen
 
+#
 
 > you can play as sweden and crush england, france, spain and russia 
 >
 > 10/10
 >
 > Vholf
+
+#
 
 > MINIMUM:  
 > OS: Windows XP (Service Pack 3)  
