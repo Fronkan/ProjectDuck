@@ -3,33 +3,28 @@ using System.Collections;
 
 public class ThunderCloud : MonoBehaviour {
 
-	SpriteRenderer cloud;
-	SpriteRenderer thunderCloud;
 	public float delay;
 	public float repeatTime;
 
-	// Use this for initialization
+	private SpriteRenderer renderer;
+
 	void Start () {
-		cloud = transform.Find("cloud").GetComponent<SpriteRenderer>();
-		thunderCloud = transform.Find("thunderCloud").GetComponent<SpriteRenderer>();
+		renderer = gameObject.GetComponent<SpriteRenderer>();
 
 		InvokeRepeating("ReadyShoot", delay, repeatTime);
 	}
-	
-	// Update is called once per frame
-	void Update () { }
 
 	void ReadyShoot() {
-		cloud.enabled = false;
-		thunderCloud.enabled = true;
+		renderer.color = Color.grey;
 
 		StartCoroutine(Shoot());
 	}
 
 	IEnumerator Shoot() {
 		yield return new WaitForSeconds(1);
+
+		renderer.color = Color.white;
+
 		gameObject.SendMessage("RecieveSignal");
-		cloud.enabled = true;
-		thunderCloud.enabled = false;
 	}
 }
