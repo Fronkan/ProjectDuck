@@ -1,4 +1,4 @@
-# Limbo Dancer
+
 From Angry Mokeys
 
 [source](https://github.com/HugoNikanor/ProjectDuck)
@@ -65,3 +65,13 @@ stuck in limbo.
 > Ljudkort: any
 >
 > Ibb & Obb
+
+## System requirements
+
+MINIMUM:  
+OS: OS/2  
+Processor: Preferably  
+Minne: 100 Uppsalgsverk  
+Grafik: Whatever my system has  
+Lagring: It's on the web, so 0PB  
+Ljudkort: Did we even add sound?
