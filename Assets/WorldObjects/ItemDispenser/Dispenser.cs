@@ -10,7 +10,7 @@ public class Dispenser : SignalReciever {
 
 	void Dispense() {
 		GameObject clone = Object.Instantiate(DispensedObject);
-		clone.transform.position = gameObject.transform.position + dispenseOffset;
+		clone.transform.position = gameObject.transform.position + new Vector3(dispenseOffset.x, dispenseOffset.y, 0);
 		clone.GetComponent<Rigidbody2D>().velocity = DispenseSpeedDirection;
 
 		Destroy(clone, BulletLifeTime);
