@@ -3,7 +3,7 @@ using System.Collections;
 
 public class death : MonoBehaviour {
 
-    public ParticleSystem test;
+    public ParticleSystem deathParticles;
 
     void Start() {
        
@@ -15,7 +15,7 @@ public class death : MonoBehaviour {
     }
     void Kill()
     {
-        ParticleSystem explosion = Object.Instantiate(test);
+        ParticleSystem explosion = Object.Instantiate(deathParticles);
         explosion.transform.position = transform.position;
 
     }
