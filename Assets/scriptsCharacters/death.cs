@@ -11,6 +11,7 @@ public class death : MonoBehaviour {
 
     void Damage() {
         Kill();
+        GameObject.Find("_GM").SendMessage("ShowLoss");
         Destroy(gameObject);
     }
     void Kill()

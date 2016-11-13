@@ -14,8 +14,9 @@ public class Victory : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (point1.isVictory && point2.isVictory) {
-            //TODO: Add victory screen and level changer
             Debug.Log("VICTORY");
+            GameObject.Find("_GM").SendMessage("ShowWin");
+
         }
 	}
 }
