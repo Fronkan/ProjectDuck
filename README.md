@@ -1,3 +1,3 @@
 # ProjectDuck
 
-This is a pretty nice game about a duck and a crab. However, there is a much better game about a duck and a crab [here](https://github.com/TheZoq2/ProjectDuck)
+A small 2D co-op puzzle game created during a 48-hour Game Jam in Linköping, the Fall of 2016. 
